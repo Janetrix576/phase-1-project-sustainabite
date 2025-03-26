@@ -1,0 +1,17 @@
+nav{
+    display: flex;
+    padding: 1rem;
+    background: #2e8b57;
+    color: white;
+}
+
+.nav-link{
+    color: white;
+    text-decoration: none;
+}
+
+.nav-link.active{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
