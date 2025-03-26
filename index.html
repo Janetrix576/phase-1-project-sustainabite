@@ -3,24 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SustainaBite</title>
+    <title>SustainaBite | Fight Food Wastage</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header>
-        <h1>SustainaBite</h1>
-        <p>Connecting People To Sustainable Food</p>
-    </header>
+    <nav>
+        <div class="logo">SustainaBite</div>
 
-    <main>
-        <section id="Food-List">
+        <ul>
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="donate" class="nav-link">Donate</a></li>
+            <li><a href="blog" class="nav-link">Blog</a></li>
+        </ul>
+    </nav>
 
-            <h2>Food Sustainability Insights</h2>
+        <main>
+            <section id="home" class="page section">
+                <header class="hero">
+                    <h1>Save Food. Save The Planet.</h1>
+                    <p>Buy or doante surplus food to reduce waste.</p>
+                </header>
+            </section>
 
-            <div id="output">Loading...</div>
-        </section>
-    </main>
+            <section id="donate" class="page-section" hidden>
+                <h2>Donate Food</h2>
+                <form id="donateForm">
+                    <input type="text"  placeholder="Food Item" required>
+                    <button type="submit">Post</button>
+                </form>
+            </section>
+
+            <section id="blog" class="page-section" hidden>
+                <h2>Sustainability Tips</h2>
+                <article>
+                    <h3>How to Compost</h3>
+                    <p>Step-by-step guide...</p>
+                </article>
+
+            </section>
+        </main>
     <script src="index.js"></script>
     
 </body>
