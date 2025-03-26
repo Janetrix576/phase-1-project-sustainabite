@@ -10,40 +10,69 @@
 
 <body>
     <nav>
-        <div class="logo">SustainaBite</div>
-
-        <ul>
-            <li><a href="#home" class="nav-link active">Home</a></li>
-            <li><a href="donate" class="nav-link">Donate</a></li>
-            <li><a href="blog" class="nav-link">Blog</a></li>
-        </ul>
+        <div class="logo">Sustainabite</div>
+        <div class="nav-links">
+            <a href="#how-it-works">How It Works</a>
+            <a href="#shop">Shop Surplus</a>
+            <a href="#donate">Donate</a>
+            <button class="btn-primary">Sign-Up</button>
+        </div>
     </nav>
 
-        <main>
-            <section id="home" class="page section">
-                <header class="hero">
-                    <h1>Save Food. Save The Planet.</h1>
-                    <p>Buy or doante surplus food to reduce waste.</p>
-                </header>
-            </section>
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Rescue delicious, surplus food at half the price.</h1>
+            <p>Join the fight against food waste.</p>
+            <button class="btn-primary">Browser Listings</button>
+        </div>
 
-            <section id="donate" class="page-section" hidden>
-                <h2>Donate Food</h2>
-                <form id="donateForm">
-                    <input type="text"  placeholder="Food Item" required>
-                    <button type="submit">Post</button>
-                </form>
-            </section>
+        <div class="hero-image">
+            <img src="images/hero-food.jpg" alt="Fresh surplus food">
+        </div>
+        </section>
 
-            <section id="blog" class="page-section" hidden>
-                <h2>Sustainability Tips</h2>
-                <article>
-                    <h3>How to Compost</h3>
-                    <p>Step-by-step guide...</p>
-                </article>
+        <section id="how-it-works" class="steps">
+            <h2>How Sustainabite Works</h2>
+            <div class="step-container">
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <h3>Browse Listings</h3>
+                    <p>Find discounted surplus food near you.</p>
+                </div>
 
-            </section>
-        </main>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <h3>Order Online</h3>
+                    <p>Reserve items for pick up or delivery.</p>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <h3>Enjoy & Save</h3>
+                    <p>Get great food while reducing waste.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="shop" class="listings">
+            <h2>Shop Surplus Food</h2>
+            <div class="food-grid" id="foodGrid">
+                </div>
+                </section>
+
+                <section id="donate" class="donate-cta">
+                    <div class="donate-text">
+                        <h2>Have Extra Food? Donate it!</h2>
+                        <p>Connect with local NGOs to reduce waste.</p>
+                        <button class="btn-primary">Post Donation</button>
+                    </div>
+
+                    <div class="donate-image">
+                        <img src="images/donate-food.jpg" alt="Food donation">
+                    </div>
+
+                </section>
+
     <script src="index.js"></script>
     
 </body>
