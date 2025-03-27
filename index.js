@@ -1,14 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelector('.nav-links');
-    const menuToggle = document.createElement('button');
-    menuToggle.classList.add('menu-toggle');
-    menuToggle.innerHTML = '☰';
-    document.querySelector('nav').appendChild(menuToggle);
 
-    menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        menuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
-    });
 
     const loadFoodListings = async () => {
         try {
@@ -158,6 +150,112 @@ document.addEventListener('DOMContentLoaded', function() {
                 navLinks.classList.remove('active');
                 menuToggle.textContent = '☰';
             }
+        });
+    });
+
+    document.querySelector('.donate-cta .btn-primary').addEventListener('click', function() {
+        const form = document.createElement('form');
+        form.classList.add('donation-form');
+        
+        form.innerHTML = `
+            <h3>Post a Donation</h3>
+            <div class="form-group">
+                <label for="food-type">Food Type</label>
+                <input type="text" id="food-type" required>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="expiry">Expiry Date</label>
+                <input type="date" id="expiry" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Pickup Location</label>
+                <input type="text" id="location" required>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">Submit Donation</button>
+                <button type="button" class="btn-secondary cancel-btn">Cancel</button>
+            </div>
+        `;
+    
+        const style = document.createElement('style');
+        style.textContent = `
+            .donation-form {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: white;
+                padding: 2rem;
+                border-radius: 8px;
+                box-shadow: 0 0 20px rgba(0,0,0,0.2);
+                z-index: 1000;
+                width: 90%;
+                max-width: 500px;
+            }
+            .form-group {
+                margin-bottom: 1rem;
+            }
+            .form-group label {
+                display: block;
+                margin-bottom: 0.5rem;
+                font-weight: 500;
+            }
+            .form-group input {
+                width: 100%;
+                padding: 0.8rem;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+            }
+            .form-actions {
+                display: flex;
+                gap: 1rem;
+                margin-top: 1.5rem;
+            }
+            .overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0,0,0,0.5);
+                z-index: 999;
+            }
+        `;
+        document.head.appendChild(style);
+    
+        const overlay = document.createElement('div');
+        overlay.classList.add('overlay');
+    
+        document.body.appendChild(overlay);
+        document.body.appendChild(form);
+    
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const donation = {
+                type: document.getElementById('food-type').value,
+                quantity: document.getElementById('quantity').value,
+                expiry: document.getElementById('expiry').value,
+                location: document.getElementById('location').value,
+                datePosted: new Date().toISOString()
+            };
+    
+            console.log('Donation submitted:', donation);
+            alert('Thank you for your donation! We will contact you shortly.');
+    
+            document.body.removeChild(form);
+            document.body.removeChild(overlay);
+            document.head.removeChild(style);
+        });
+    
+        document.querySelector('.cancel-btn').addEventListener('click', function() {
+            document.body.removeChild(form);
+            document.body.removeChild(overlay);
+            document.head.removeChild(style);
         });
     });
 
