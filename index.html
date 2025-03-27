@@ -4,31 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SustainaBite | Reduce Food Waste, Save Money</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <nav>
-        <div class="logo">Sustainabite</div>
-        <div class="nav-links">
-            <a href="#how-it-works">How It Works</a>
-            <a href="#shop">Shop Surplus</a>
-            <a href="#donate">Donate</a>
-            <button class="btn-primary">Sign-Up</button>
-        </div>
-    </nav>
+    <header>
+        <nav>
+            <div class="logo">Sustainabite</div>
+            <div class="nav-links">
+                <a href="#how-it-works">How It Works</a>
+                <a href="#shop">Shop Surplus</a>
+                <a href="#donate">Donate</a>
+                <button class="btn-primary">Sign-Up</button>
+            </div>
+        </nav>
+    </header>
 
-    <section class="hero">
-        <div class="hero-text">
-            <h1>Rescue delicious, surplus food at half the price.</h1>
-            <p>Join the fight against food waste.</p>
-            <button class="btn-primary">Browser Listings</button>
-        </div>
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Rescue delicious, surplus food at half the price.</h1>
+                <p>Join the fight against food waste.</p>
+                <button class="btn-primary">Browse Listings</button>
+            </div>
 
-        <div class="hero-image">
-            <img src="images/hero-food.jpg" alt="Fresh surplus food">
-        </div>
+            <div class="hero-image">
+                <img src="./images/hero-food.jpg" alt="A variety of fresh surplus food">
+            </div>
         </section>
 
         <section id="how-it-works" class="steps">
@@ -57,23 +60,27 @@
         <section id="shop" class="listings">
             <h2>Shop Surplus Food</h2>
             <div class="food-grid" id="foodGrid">
-                </div>
-                </section>
+                <!-- Food items will be dynamically loaded here -->
+            </div>
+        </section>
 
-                <section id="donate" class="donate-cta">
-                    <div class="donate-text">
-                        <h2>Have Extra Food? Donate it!</h2>
-                        <p>Connect with local NGOs to reduce waste.</p>
-                        <button class="btn-primary">Post Donation</button>
-                    </div>
+        <section id="donate" class="donate-cta">
+            <div class="donate-text">
+                <h2>Have Extra Food? Donate it!</h2>
+                <p>Connect with local NGOs to reduce waste.</p>
+                <button class="btn-primary">Post Donation</button>
+            </div>
 
-                    <div class="donate-image">
-                        <img src="images/donate-food.jpg" alt="Food donation">
-                    </div>
+            <div class="donate-image">
+                <img src="./images/donate-food.jpg" alt="A person donating food">
+            </div>
+        </section>
+    </main>
 
-                </section>
+    <footer>
+        <p>&copy; 2023 Sustainabite. All rights reserved.</p>
+    </footer>
 
-    <script src="index.js"></script>
-    
+    <script src="./index.js" defer></script>
 </body>
 </html>
