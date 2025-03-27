@@ -1,15 +1,7 @@
-:root{
-    --primary-green: #2e8b57;
-    --dark-green: #1e6b4e;
-    --cream: #f9f9f7;
-    --dark-grey: #333333;
-    --light-grey: #e0e0e0;
-}
-
 body{
     font-family: 'Inter', sans-serif;
-    background-color: var(--cream);
-    color: var(--dark-grey);
+    background-color: #f9f9f7;
+    color: #333333;
     margin: 0;
 }
 
@@ -29,21 +21,21 @@ nav{
 .logo{
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--dark-green);
+    color: #1e6b4e;
 }
 
 .nav-links a{
-    color: var(--dark-grey);
+    color: #333333;
     text-decoration: none;
     font-weight: 500;
 }
 
 .nav-links a:hover{
-    color: var(--primary-green);
+    color: #2e8b57;
 }
 
 .btn-primary{
-    background-color: var(--primary-green);
+    background-color: #2e8b57;
     color: white;
     padding: 0.8rem 1.5rem;
     border-radius: 6px;
@@ -54,7 +46,7 @@ nav{
 }
 
 .btn-primary:hover{
-    background-color: var(--dark-green);
+    background-color: #1e6b4e;
     transform: translateY(-2px);
 }
 
@@ -105,7 +97,7 @@ nav{
     text-align: center;
     margin-bottom: 2rem;
     font-size: 2.2rem;
-    color: var(--dark-green);
+    color: #1e6b4e;
 }
 
 .food-grid{
@@ -178,7 +170,7 @@ nav{
 .steps {
     padding: 4rem 5%;
     text-align: center;
-    background-color: var(--cream);
+    background-color: #f9f9f7;
 }
 
 .step-container{
@@ -204,7 +196,7 @@ nav{
     height: 40px;
     line-height: 40px;
     border-radius: 50%;
-    background-color: var(--primary-green);
+    background-color: #2e8b57;
     margin-bottom: 1rem;
 }
 
@@ -230,7 +222,7 @@ nav{
 }
 
 .footer{
-    background-color: var(--dark-grey);
+    background-color: #333333;
     color: white;
     padding: 2rem;
     text-align: center;
@@ -264,7 +256,7 @@ nav{
 
 .category-filter {
     padding: 0.5rem 1rem;
-    border: 1px solid var(--primary-green);
+    border: 1px solid #2e8b57;
     background: white;
     border-radius: 20px;
     cursor: pointer;
@@ -272,7 +264,7 @@ nav{
 }
 
 .category-filter:hover {
-    background: var(--primary-green);
+    background: #2e8b57;
     color: white;
 }
 
@@ -280,7 +272,7 @@ nav{
     display: inline-block;
     margin-top: 0.5rem;
     padding: 0.2rem 0.8rem;
-    background: var(--light-grey);
+    background: #e0e0e0;
     border-radius: 12px;
     font-size: 0.8rem;
 }
