@@ -23,18 +23,13 @@ nav{
     position: sticky;
     top: 0;
     z-index: 100;
+    white-space: nowrap;
 }
 
 .logo{
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--dark-green);
-}
-
-.nav-links{
-    display: flex;
-    gap: 2rem;
-    align-items: center;
 }
 
 .nav-links a{
@@ -65,12 +60,12 @@ nav{
 
 .btn-secondary{
     background-color: white;
-    color: var(--primary-green);
+    color: green;
     padding: 0.8rem 1.5rem;
     border-radius: 6px;
     font-weight: 600;
     cursor: pointer;
-    border: 2px solid var(--primary-green);
+    border: 2px solid green;
 }
 
 .hero{
@@ -103,7 +98,7 @@ nav{
 .listings{
     padding: 4rem 5%;
     position: relative;
-    background: var(--cream);
+    background: cream;
 }
 
 .listings h2{
@@ -123,7 +118,7 @@ nav{
 }
 
 .food-card{
-    background: white;
+    background: rgb(233, 204, 204);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -169,16 +164,15 @@ nav{
         flex-direction: row;
         background-color: white;
         position: absolute;
-        top: 100%;
+        top: 10%;
         right: 5%;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
         padding: 1rem;
         border-radius: 8px;
-        z-index: 200;
-    }
-    
-    .nav-links.active{
+        z-index: 150;
         display: flex;
+        gap: 1.5rem;
+        align-items: center;
     }
     
 .steps {
@@ -251,4 +245,49 @@ nav{
 .donate-cta{
     flex-direction: column;
     gap: 2rem;
+}
+.error-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 2rem;
+    color: #d32f2f;
+    background-color: #ffebee;
+    border-radius: 8px;
+}
+.category-filters {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.category-filter {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-green);
+    background: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.category-filter:hover {
+    background: var(--primary-green);
+    color: white;
+}
+
+.food-card .category {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.2rem 0.8rem;
+    background: var(--light-grey);
+    border-radius: 12px;
+    font-size: 0.8rem;
+}
+
+.no-items, .error {
+    grid-column: 1/-1;
+    text-align: center;
+    padding: 2rem;
+    color: #666;
 }
